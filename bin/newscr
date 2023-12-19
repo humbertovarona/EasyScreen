@@ -1,0 +1,11 @@
+SCR=`screen -ls | grep -w "$1"`
+
+if [ -z "$SCR" ];then
+  screen -d -m -S "$1" -t "$1"
+  echo "The screen "$1" was created"
+  screen -ls
+else
+  echo "The screen "$1" exists"
+fi
+
+exit 0
