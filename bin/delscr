@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SCR=`screen -ls | grep -w "$1"`
+
+if [ -n "$SCR" ];then
+  screen -X -S "$1" kill
+  echo "The screen "$1" was destroyed"
+  screen -ls
+else
+  echo "The screen "$1" does not exist"
+fi
+
+exit 0
