@@ -1,3 +1,5 @@
+#!/bin/bash
+
 SCR=`screen -ls | grep -w "$1"`
 
 if [ -z "$SCR" ];then
