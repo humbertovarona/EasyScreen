@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#screen -d "$1"
+screen -d -r "$1"
+
+exit 0
